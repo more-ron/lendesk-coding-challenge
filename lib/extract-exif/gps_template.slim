@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title Image GPS Information
+  body
+    table
+      thead
+        tr
+          - headers.each do |item|
+            th= item
+      tbody
+        - rows.each do |row|
+          tr
+            td= row[:image_path]
+            td= row[:latitude]
+            td= row[:longitude]
+            td= row[:map_link]
+            td= row[:note]
